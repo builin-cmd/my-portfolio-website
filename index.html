@@ -21,10 +21,12 @@
         .font-mono {
             font-family: 'Fira Code', monospace;
         }
+        /* Background Animated Particles/Dots effect */
         .bg-cyber-grid {
             background-image: radial-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 0);
             background-size: 24px 24px;
         }
+        /* Hexagon Clip Path */
         .hexagon-shape {
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         }
@@ -114,15 +116,18 @@
                 </div>
             </div>
 
-            <!-- Right Hexagon Profile Picture (Touch / Click to Swap) -->
+            <!-- Right Hexagon Profile Picture (Click / Touch to Swap) -->
             <div class="lg:col-span-5 flex justify-center">
                 <div onclick="swapProfilePhoto()" class="cursor-pointer group relative w-72 h-80 sm:w-80 sm:h-96 flex items-center justify-center">
                     
+                    <!-- Hexagon Border Gradient -->
                     <div class="hexagon-border w-full h-full transition-transform duration-500 group-hover:scale-105">
                         <div class="hexagon-shape bg-slate-950 w-full h-full relative overflow-hidden">
                             
+                            <!-- User Image -->
                             <img id="profileImage" src="assets/picture.jpg" alt="BUI LIN" class="w-full h-full object-cover transition-all duration-300 group-hover:scale-105" onerror="this.src='assets/profile.jpg'">
 
+                            <!-- Interactive Hover/Touch Indicator -->
                             <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-center p-4">
                                 <i class="fa-solid fa-arrows-rotate text-blue-400 text-2xl mb-2 animate-spin"></i>
                                 <span class="text-xs font-mono text-white">Touch to Switch Photo</span>
