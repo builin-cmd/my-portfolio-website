@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUI LIN | Systems, Networking & Cybersecurity Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700;800&family=Kantumruy+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyberBg: '#090d16',
+                        cyberCard: '#111827',
+                        cyberPrimary: '#06b6d4',
+                        cyberAccent: '#10b981',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Kantumruy Pro', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hex-border { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+        .glass-panel { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glow-cyan { box-shadow: 0 0 30px rgba(6, 182, 212, 0.25); }
+    </style>
+</head>
+<body class="bg-cyberBg text-slate-300 font-sans antialiased selection:bg-cyberPrimary selection:text-black">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-cyberBg/85 backdrop-blur-xl border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold font-mono tracking-wider text-white">
+                <span class="text-cyberPrimary">&lt;</span>BUI LIN<span class="text-cyberPrimary">/&gt;</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-cyberPrimary transition-colors" data-en="About" data-km="អំពីខ្ញុំ">About</a>
+                <a href="#certifications" class="hover:text-cyberPrimary transition-colors" data-en="Certifications" data-km="វិញ្ញាបនបត្រ">Certifications</a>
+                <a href="#projects" class="hover:text-cyberPrimary transition-colors" data-en="Projects" data-km="គម្រោង">Projects</a>
+                <a href="#skills" class="hover:text-cyberPrimary transition-colors" data-en="Skills Matrix" data-km="ជំនាញបច្ចេកទេស">Skills Matrix</a>
+            </div>
+            
+            <!-- Language Toggle Button -->
+            <button id="langToggle" onclick="toggleLanguage()" class="px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-800 border border-slate-700 text-cyberPrimary hover:border-cyberPrimary transition-all flex items-center gap-2">
+                <span id="langText">🇰🇭 KM</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen pt-28 pb-16 px-6 flex items-center max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/90 border border-slate-700 text-xs font-mono text-cyberAccent">
+                    <span class="w-2 h-2 rounded-full bg-cyberAccent animate-pulse"></span> Passerelles Numériques Cambodia (PNC)
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+                    BUI LIN
+                </h1>
+                <h2 class="text-xl sm:text-2xl font-mono text-cyberPrimary" data-en="Systems, Networking & Cybersecurity Specialist" data-km="អ្នកជំនាញប្រព័ន្ធប្រតិបត្តិការ បណ្តាញ និងសន្តិសុខស៊ីប័រ">
+                    Systems, Networking & Cybersecurity Specialist
+                </h2>
+                <p class="text-slate-400 leading-relaxed max-w-xl" data-en="Engineering secure multi-server infrastructure on AWS EC2, configuring enterprise Linux (RHEL/Ubuntu), managing Cisco network topologies, and structuring production database environments." data-km="រៀបចំ និងគ្រប់គ្រងហេដ្ឋារចនាសម្ព័ន្ធ Server លើ AWS EC2, កំណត់រចនាសម្ព័ន្ធ Linux (RHEL/Ubuntu), គ្រប់គ្រងបណ្តាញ Cisco, និងរៀបចំប្រព័ន្ធទិន្នន័យ MariaDB/MySQL។">
+                    Engineering secure multi-server infrastructure on AWS EC2, configuring enterprise Linux (RHEL/Ubuntu), managing Cisco network topologies, and structuring production database environments.
+                </p>
+                
+                <!-- Micro Metrics Widgets -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                    <div class="p-3 glass-panel rounded-xl">
+                        <div class="text-xs text-slate-500 font-mono">Uptime</div>
+                        <div class="text-sm font-bold text-cyberAccent font-mono">99.98%</div>
+                    </div>
+                    <div class="p-3 glass-panel rounded-xl">
+                        <div class="text-xs text-slate-500 font-mono">VPC Isolation</div>
+                        <div class="text-sm font-bold text-cyberPrimary font-mono" data-en="Enforced" data-km="បានការពារ">Enforced</div>
+                    </div>
+                    <div class="p-3 glass-panel rounded-xl">
+                        <div class="text-xs text-slate-500 font-mono">SSL Encryption</div>
+                        <div class="text-sm font-bold text-amber-400 font-mono">RSA 2048-bit</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3 rounded-xl bg-cyberPrimary text-black font-bold hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all" data-en="View Projects" data-km="មើលគម្រោង">
+                        View Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Frame -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-64 h-64 sm:w-72 sm:h-72">
+                    <div class="absolute inset-0 bg-cyberPrimary rounded-full blur-2xl opacity-20"></div>
+                    <div class="w-full h-full bg-gradient-to-tr from-cyberPrimary via-emerald-400 to-blue-600 p-1 hex-border glow-cyan">
+                        <div class="w-full h-full bg-cyberBg hex-border p-2">
+                            <img src="assets/profile.jpg" alt="BUI LIN" class="w-full h-full object-cover hex-border" onerror="this.src='https://via.placeholder.com/400x400/0b0f19/06b6d4?text=BUI+LIN'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 px-6 bg-slate-900/30 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="space-y-2">
+                <h2 class="text-3xl font-extrabold text-white" data-en="Certifications & Official Badges" data-km="វិញ្ញាបនបត្រ និងសញ្ញាបត្រទទួលស្គាល់">Certifications & Official Badges</h2>
+                <p class="text-slate-400 text-sm" data-en="Verified industry credentials and academic performance achievements." data-km="សញ្ញាបត្រដែលបានទទួលស្គាល់ជាអន្តរជាតិ និងលទ្ធផលសិក្សា។">Verified industry credentials and academic performance achievements.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Red Hat -->
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/40 transition-all space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-mono text-red-400 bg-red-500/10 px-2.5 py-1 rounded">RH104 - RHA Ver. 9.1</span>
+                            <h3 class="text-lg font-bold text-white mt-2">Red Hat Training: Linux Fundamentals</h3>
+                            <p class="text-xs text-slate-400 mt-1">Red Hat / Red Hat Academy</p>
+                        </div>
+                        <i class="fa-brands fa-redhat text-red-500 text-3xl"></i>
+                    </div>
+                    <div class="w-full h-44 bg-slate-900/80 rounded-xl overflow-hidden border border-slate-800">
+                        <img src="assets/cert-redhat.jpg" alt="Red Hat Certificate" class="w-full h-full object-cover hover:scale-105 transition-all duration-300" onerror="this.src='https://via.placeholder.com/600x300/111827/06b6d4?text=Red+Hat+RH104+Certificate'">
+                    </div>
+                    <div class="flex justify-between items-center text-xs font-mono pt-1">
+                        <span class="text-slate-500">Issued: Sep 29, 2026</span>
+                        <a href="https://www.credly.com/badges/028ff715-b2b9-454f-a94f-9367495265ce" target="_blank" class="text-cyberPrimary hover:underline" data-en="Verify Credly Badge" data-km="ផ្ទៀងផ្ទាត់សញ្ញាបត្រ">Verify Credly Badge <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Cisco CCNA -->
+                <div class="glass-panel p-6 rounded-2xl hover:border-cyberPrimary/40 transition-all space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-mono text-cyberPrimary bg-cyberPrimary/10 px-2.5 py-1 rounded">Cisco Networking Academy</span>
+                            <h3 class="text-lg font-bold text-white mt-2">CCNA: Introduction to Networks</h3>
+                            <p class="text-xs text-slate-400 mt-1">Passerelles Numériques Cambodia</p>
+                        </div>
+                        <i class="fa-solid fa-network-wired text-cyberPrimary text-3xl"></i>
+                    </div>
+                    <div class="w-full h-44 bg-slate-900/80 rounded-xl overflow-hidden border border-slate-800">
+                        <img src="assets/cert-cisco.jpg" alt="CCNA Certificate" class="w-full h-full object-cover hover:scale-105 transition-all duration-300" onerror="this.src='https://via.placeholder.com/600x300/111827/06b6d4?text=Cisco+CCNA+Certificate'">
+                    </div>
+                    <div class="flex justify-between items-center text-xs font-mono pt-1">
+                        <span class="text-slate-500">Issued: Sep 06, 2026</span>
+                        <a href="https://www.credly.com/badges/f3d8c0ea-6365-4c49-a8bd-926d9c0da71c" target="_blank" class="text-cyberPrimary hover:underline" data-en="Verify Credly Badge" data-km="ផ្ទៀងផ្ទាត់សញ្ញាបត្រ">Verify Credly Badge <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 max-w-7xl mx-auto space-y-12">
+        <div class="space-y-2">
+            <h2 class="text-3xl font-extrabold text-white" data-en="Featured Infrastructure Projects" data-km="គម្រោងបច្ចេកវិទ្យាលេចធ្លោ">Featured Infrastructure Projects</h2>
+            <p class="text-slate-400 text-sm" data-en="Production-grade cloud architecture and enterprise database systems." data-km="ការបង្កើតប្រព័ន្ធ Cloud Server និងការរៀបចំប្រព័ន្ធទិន្នន័យ។">Production-grade cloud architecture and enterprise database systems.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="glass-panel p-6 rounded-2xl space-y-4 hover:border-cyberPrimary/50 transition-all">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-mono text-cyberPrimary bg-cyberPrimary/10 px-3 py-1 rounded-md">AWS Cloud Architecture</span>
+                    <i class="fa-solid fa-server text-slate-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white" data-en="High-Availability 2-Server Cloud Topology" data-km="រចនាសម្ព័ន្ធ AWS Cloud 2-Server">High-Availability 2-Server Cloud Topology</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed" data-en="Designed and deployed an isolated 2-server production infrastructure on AWS EC2. Web Server hosting 3 Apache VirtualHosts connected via Git CI/CD workflows and Certbot SSL." data-km="បង្កើតប្រព័ន្ធ Server ចំនួន ២ លើ AWS EC2 ដោយភ្ជាប់បណ្តាញដាច់ដោយឡែក (VPC) ដើម្បីសុវត្ថិភាពខ្ពស់ ព្រមទាំងកំណត់ Apache VirtualHosts និង SSL Encryption។">
+                    Designed and deployed an isolated 2-server production infrastructure on AWS EC2. Web Server hosting 3 Apache VirtualHosts connected via Git CI/CD workflows and Certbot SSL.
+                </p>
+                <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800 text-xs font-mono text-slate-400 space-y-1">
+                    <p class="text-cyberAccent">✔ Security Group Isolation Applied</p>
+                    <p>• MariaDB Port 3306 blocked from Public Internet</p>
+                    <p>• Inbound access restricted ONLY to Web Server Private IP</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-panel p-6 rounded-2xl space-y-4 hover:border-cyberPrimary/50 transition-all">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-mono text-cyberAccent bg-cyberAccent/10 px-3 py-1 rounded-md">Database Engineering</span>
+                    <i class="fa-solid fa-database text-slate-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white" data-en="Cambodia National Gazetteer Database" data-km="ប្រព័ន្ធទិន្នន័យរដ្ឋបាលខេត្ត/ក្រុង កម្ពុជា">Cambodia National Gazetteer Database</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed" data-en="Engineered a complete relational database model mapping Cambodia's national administrative structure (Provinces, Districts, Communes, Villages) with native UTF8MB4 Khmer rendering." data-km="បង្កើតប្រព័ន្ធទិន្នន័យទាក់ទងរដ្ឋបាលកម្ពុជា (ខេត្ត ស្រុក ឃុំ ភូមិ) ដោយប្រើប្រាស់ MariaDB គាំទ្រអក្សរខ្មែរយ៉ាងរលូន (UTF8MB4)។">
+                    Engineered a complete relational database model mapping Cambodia's national administrative structure (Provinces, Districts, Communes, Villages) with native UTF8MB4 Khmer rendering.
+                </p>
+                <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800 text-xs font-mono text-slate-400 space-y-1">
+                    <p class="text-cyberAccent">✔ High-Performance UTF8MB4 Encoding</p>
+                    <p>• Primary/Foreign Key relational mapping</p>
+                    <p>• Fast administrative lookups with SQL JOINs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 text-center text-xs font-mono text-slate-500 border-t border-slate-800/60">
+        <p>© 2026 BUI LIN. All rights reserved. Deployed on AWS EC2 Infrastructure (PNC).</p>
+    </footer>
+
+    <!-- Language Toggle Script -->
+    <script>
+        let currentLang = 'EN';
+        function toggleLanguage() {
+            currentLang = currentLang === 'EN' ? 'KM' : 'EN';
+            document.getElementById('langText').innerText = currentLang === 'EN' ? '🇰🇭 KM' : '🇬🇧 EN';
+            
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(el => {
+                const text = el.getAttribute(`data-${currentLang.toLowerCase()}`);
+                if (text) el.innerText = text;
+            });
+        }
+    </script>
+</body>
+</html>
